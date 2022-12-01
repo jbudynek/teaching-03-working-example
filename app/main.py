@@ -76,7 +76,7 @@ async def train_iris():
     return {"training": str(tabular_model)}
 
 
-@app.post("/iris_report")
+@app.get("/iris_report")
 async def iris_report():
     """
     report
@@ -84,7 +84,7 @@ async def iris_report():
 
     # TODO
 
-    return {"report": "ok"}
+    return {"report": "no report"}
 
 
 #

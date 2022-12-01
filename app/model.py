@@ -14,7 +14,7 @@ def load_tabular_model():
     """
     if not Path("model_tabular/iris.joblib").is_file():
         train_and_save_tabular()
-    tabular_model = load(pathlib.Path("model_tabular/iris.joblib"))
+    tabular_model = load(Path("model_tabular/iris.joblib"))
     return tabular_model
 
 
@@ -47,4 +47,6 @@ def train_and_save_tabular():
     print(f"Mean accuracy score: {accuracy:.3}")
 
     print("Saving model")
+    p = Path("model_tabular/")
+    p.mkdir(parents=True, exist_ok=True)
     dump(rf, Path("model_tabular/iris.joblib"))
