@@ -1,6 +1,6 @@
 # Practicing packaging, containerization and monitoring
 
-This file is a working example of basics of app packaging and containerization. The monitoring part is left as an exercise!
+This file is a working example of basics of app packaging and containerization. The monitoring part is left as an exercise! See instructions at: https://github.com/jbudynek/teaching2022-3-template
 
 Prepare environment:
 ```
