@@ -1,17 +1,15 @@
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn import datasets
-from joblib import dump
-from joblib import load
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
+from joblib import dump, load
+from sklearn import datasets
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 
 
 def load_tabular_model():
-    """
-    returns the model, train it first if it does not exist.
-    """
+    """returns the model, train it first if it does not exist."""
     if not Path("model_tabular/iris.joblib").is_file():
         train_and_save_tabular()
     tabular_model = load(Path("model_tabular/iris.joblib"))
@@ -19,9 +17,7 @@ def load_tabular_model():
 
 
 def train_and_save_tabular():
-    """
-    Trains a simple classifier on a tabular 3-classes dataset (iris).
-    """
+    """Trains a simple classifier on a tabular 3-classes dataset (iris)."""
 
     iris = datasets.load_iris()
     df = pd.DataFrame(iris.data, columns=iris.feature_names)
