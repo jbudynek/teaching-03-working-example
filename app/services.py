@@ -1,6 +1,6 @@
 import numpy as np
-from database import load_model, save_model
 from model import predict, train_model
+from persistence import load_model, save_model
 
 
 def get_or_train_model():
