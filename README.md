@@ -27,4 +27,4 @@ docker run -d --name fastapiml-app -p 5000:5000 fastapiml
 
 ## Notes
 
-Used in 2022 and 2023 with AI engineering students in Bordeaux.
+Used in 2022, 2023 and 2024 with AI engineering students in Bordeaux.
